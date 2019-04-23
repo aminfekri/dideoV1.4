@@ -1,0 +1,41 @@
+{
+  "background": {
+    "page": "src/html/background.html"
+  },
+  "browser_action": {
+    "default_icon": "icons/enable.png",
+    "default_popup": "src/html/popup.html",
+    "default_title": "دیدئو - فعال"
+  },
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "js": ["includes/content.js"],
+      "matches": ["http://*/*", "https://*/*"],
+      "run_at": "document_start"
+    }
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "description": "با افزونه دیدئو ویدیو های یوتیوب را بدون فیلتر در دیدئو تماشا کنید",
+  "icons": {
+    "128": "icons/icon128.png",
+    "16": "icons/button.png",
+    "48": "icons/icon48.png"
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAx+m3U7/vV16Jktn/784YwkOKCRe0hsAJlFDZ918mO9rjh/U/YoE2y+un339KPMU2omuOjC0mHH3pAbTNTAnc2hlM8yLiLWKtyrSSA4bMdh76ozUKBmwijharzhWe10zgmq5m53VR6ODFPxbIlAUgeDLiBq2UJLLReN+2aDGniFXC+097DMWu1pfFSpGHxwlXRmFZA8k3h9RK54193nbqQdYfACIKmzLLstM0j9FosVt1HhOwW/aye+FyIzLZEdryxSLJA3YzeHVfiUJ9u8dPQpyiUBcJZxpuBQJ01+BPZ6lk4BmGpvz+2yfSp014AnjR1H5N6e87BOpJlBlbMrkfrQIDAQAB",
+  "manifest_version": 2,
+  "name": "Dideo",
+  "permissions": [
+    "tabs",
+    "http://*/*",
+    "https://*/*",
+    "contextMenus",
+    "webNavigation",
+    "webRequest",
+    "webRequestBlocking",
+    "*://*/*"
+  ],
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "version": "1.4",
+  "web_accessible_resources": ["res/*", "assets/*", "icons/*"]
+}

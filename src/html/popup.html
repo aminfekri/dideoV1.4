@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="../../kango-ui/kango_api.js"></script>
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/popup.js"></script>
+    <script type="text/javascript" src="../js/bootstrap-toggle.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../style/bootstrap.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../style/bootstrap-toggle.css"
+    />
+    <style type="text/css">
+      @font-face {
+        font-family: "bnazanin";
+        src: url("../../fonts/IRANSans.ttf");
+      }
+      @font-face {
+        font-family: "Glyphicons Halflings";
+        src: url("../../fonts/glyphicons-halflings-regular.eot");
+        src: url("../../fonts/glyphicons-halflings-regular.eot?#iefix")
+            format("embedded-opentype"),
+          url("../../fonts/glyphicons-halflings-regular.woff") format("woff"),
+          url("../../fonts/glyphicons-halflings-regular.ttf") format("truetype"),
+          url("../../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular")
+            format("svg");
+      }
+      body {
+        width: 250px;
+        font-family: "bnazanin";
+        background-color: #f2f2f2;
+      }
+      nav {
+        background-image: linear-gradient(-30deg, #403557 10%, #e41b49 90%);
+        border: none;
+        height: 70px;
+      }
+      #logo {
+        float: right;
+        margin-right: 60px;
+      }
+      #logo > img {
+        margin-top: 3px;
+        width: 100px;
+      }
+      hr {
+        margin-bottom: 10px;
+        margin-top: 10px;
+      }
+      #content {
+        direction: rtl;
+        padding-right: 0px;
+        padding-left: 0px;
+        padding-bottom: 10px;
+        text-align: center;
+      }
+      .alert {
+        border-color: none;
+        border-radius: 0px;
+        height: 85px;
+      }
+      .nav-pills {
+        direction: rtl;
+        padding-right: 0px;
+        background-color: white;
+      }
+      .nav-pills > li {
+        text-align: center;
+      }
+      #container > #alert {
+        text-align: center;
+        height: 85px;
+      }
+      .nav-pills > li > a > span {
+        margin-left: 5px;
+      }
+      .navbar-header {
+        float: right;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-inverse" style="border: none">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <div class="navbar-brand">
+            <div class="logo-background">
+              <div id="logo">
+                <img src="../../icons/dideo-with-text.svg" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+    <!-- end navbar -->
+
+    <div id="content">
+      <div id="alert">
+        <div id="al1" class="alert alert-info" role="alert">
+          افزونه دیدئو فعال است
+        </div>
+        <div id="al2" class="alert alert-info" role="alert">
+          تغییر خودکار آدرس فعال است
+        </div>
+      </div>
+
+      <hr />
+      <span> فعال کردن افزونه:</span>
+      <span
+        ><input
+          data-onstyle="success"
+          type="checkbox"
+          id="toggle-two"
+          data-on="فعال"
+          data-off="غیر فعال"
+      /></span>
+      <hr />
+      <span>تغییر خودکار آدرس ها:</span>
+      <span
+        ><input
+          data-onstyle="success"
+          type="checkbox"
+          id="toggle-tree"
+          data-on="فعال"
+          data-off="غیر فعال"
+      /></span>
+    </div>
+
+    <ul class="nav nav-pills nav-stacked">
+      <li role="presentation">
+        <a id="home" href="#"
+          ><span class="glyphicon glyphicon-search" aria-hidden="true"></span
+          ><b>جست و جو در دیدئو</b></a
+        >
+      </li>
+
+      <li role="presentation">
+        <a id="help" href="#">
+          <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+          <b>راهنمای استفاده از افزونه</b>
+        </a>
+      </li>
+    </ul>
+  </body>
+</html>
